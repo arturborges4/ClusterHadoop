@@ -58,3 +58,9 @@ Motivo: Informar ao cluster os nós que devem atuar como DataNodes e NodeManager
 - Executei o job WordCount usando:
 ```hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar wordcount /user/hadoop/input /user/hadoop/output```
 - Verifiquei os resultados com ```hadoop fs -cat /user/hadoop/output/part-r-00000```
+
+
+
+<h3>2. Onde o arquivo foi enviado e como foi especificado:</h3>
+O arquivo input.txt foi enviado ao HDFS no diretório ```/user/hadoop/input```
+Na execução do WordCount, o diretório de entrada foi especificado como ```/user/hadoop/input```, e o de saída foi definido como ```/user/hadoop/output```
