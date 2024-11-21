@@ -2,7 +2,7 @@
 Cluster Hadoop utilizando VMs Ubuntu Server no Proxmox
 
 
-<h1>Configuração do Cluster</h1>
+🖥️Configuração do Cluster
 1. Função de cada nó no cluster Hadoop:
 
 <h2>NameNode (Master):</h2>
