@@ -50,12 +50,11 @@ Motivo: Informar ao cluster os nós que devem atuar como DataNodes e NodeManager
 
 
 <h1>Execução da Aplicação</h1>
-1. Etapas para executar o WordCount:
-Criei um arquivo input.txt contendo palavras simples.
-Usei o comando hadoop fs -mkdir para criar um diretório de entrada no HDFS.
-Carreguei o arquivo input.txt no HDFS com hadoop fs -put.
-Executei o job WordCount usando:
-bash
-Copiar código
-hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar wordcount /user/hadoop/input /user/hadoop/output
-Verifiquei os resultados com hadoop fs -cat /user/hadoop/output/part-r-00000.
+<h3>1. Etapas para executar o WordCount:</h3>
+
+- Criei um arquivo input.txt contendo palavras simples.
+- Usei o comando ```hadoop fs -mkdir``` para criar um diretório de entrada no HDFS.
+- Carreguei o arquivo input.txt no HDFS com ```hadoop fs -put```
+- Executei o job WordCount usando:
+```hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar wordcount /user/hadoop/input /user/hadoop/output```
+Verifiquei os resultados com ```hadoop fs -cat /user/hadoop/output/part-r-00000```
