@@ -57,4 +57,4 @@ Motivo: Informar ao cluster os nós que devem atuar como DataNodes e NodeManager
 - Carreguei o arquivo input.txt no HDFS com ```hadoop fs -put```
 - Executei o job WordCount usando:
 ```hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar wordcount /user/hadoop/input /user/hadoop/output```
-Verifiquei os resultados com ```hadoop fs -cat /user/hadoop/output/part-r-00000```
+- Verifiquei os resultados com ```hadoop fs -cat /user/hadoop/output/part-r-00000```
