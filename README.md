@@ -72,7 +72,7 @@ Na execução do WordCount, o diretório de entrada foi especificado como /user/
 
 <h3>2. Distribuição da carga entre os nós:</h3>
 - O job foi distribuído entre os três DataNodes, com cada nó processando blocos armazenados localmente.
-- Razões para carga desigual:
-    Dados locais: O Hadoop tenta processar blocos no mesmo nó onde estão armazenados.
-    Número de blocos: Se o arquivo possui poucos blocos, nem todos os nós serão usados igualmente.
-    Configuração do cluster: Parâmetros como número de Map/Reduce Tasks podem limitar a paralelização.
+- Razões para carga desigual
+     Dados locais: O Hadoop tenta processar blocos no mesmo nó onde estão armazenados.                                                                                                                                                       
+     Número de blocos: Se o arquivo possui poucos blocos, nem todos os nós serão usados igualmente.                                                                                                                            
+     Configuração do cluster: Parâmetros como número de Map/Reduce Tasks podem limitar a paralelização.
