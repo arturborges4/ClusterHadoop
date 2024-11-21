@@ -25,7 +25,9 @@ Trabalha com o NodeManager para alocar contêineres e monitorar tarefas.
 Executa tarefas atribuídas pelo ResourceManager.
 Monitora o uso de recursos (CPU, memória) em cada nó.
 
-<h2>2. Configurações alteradas nos arquivos do Hadoop e motivos:</h2>
+
+
+<h1>2. Configurações alteradas nos arquivos do Hadoop e motivos:</h1>
 
 <h3>core-site.xml</h3>
 fs.defaultFS: Configurado com o endereço do NameNode (hdfs://192.168.100.193:9000) para centralizar a comunicação.
@@ -44,3 +46,16 @@ Motivo: Permitir que o YARN coordene a execução das aplicações distribuídas
 <h3>slaves</h3>
 Adicionados os endereços dos nós slave (slave1 e slave2).
 Motivo: Informar ao cluster os nós que devem atuar como DataNodes e NodeManagers.
+
+
+
+<h1>Execução da Aplicação</h1>
+1. Etapas para executar o WordCount:
+Criei um arquivo input.txt contendo palavras simples.
+Usei o comando hadoop fs -mkdir para criar um diretório de entrada no HDFS.
+Carreguei o arquivo input.txt no HDFS com hadoop fs -put.
+Executei o job WordCount usando:
+bash
+Copiar código
+hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar wordcount /user/hadoop/input /user/hadoop/output
+Verifiquei os resultados com hadoop fs -cat /user/hadoop/output/part-r-00000.
