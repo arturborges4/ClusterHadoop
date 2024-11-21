@@ -60,7 +60,19 @@ Motivo: Informar ao cluster os nós que devem atuar como DataNodes e NodeManager
 - Verifiquei os resultados com ```hadoop fs -cat /user/hadoop/output/part-r-00000```
 
 
-
 <h3>2. Onde o arquivo foi enviado e como foi especificado:</h3>
-O arquivo input.txt foi enviado ao HDFS no diretório ```/user/hadoop/input```
-Na execução do WordCount, o diretório de entrada foi especificado como ```/user/hadoop/input```, e o de saída foi definido como ```/user/hadoop/output```
+O arquivo input.txt foi enviado ao HDFS no diretório /user/hadoop/input.
+Na execução do WordCount, o diretório de entrada foi especificado como /user/hadoop/input, e o de saída foi definido como /user/hadoop/output.
+
+<h3>3. Como o Hadoop divide e distribui as tarefas:</h3>
+- O HDFS divide o arquivo de entrada em blocos (padrão: 128 MB).
+- Cada bloco é processado por um Map Task, atribuído aos DataNodes que armazenam os blocos.
+- O Reduce Task combina os resultados intermediários dos Map Tasks, produzindo a saída final.
+
+
+<h3>2. Distribuição da carga entre os nós:</h3>
+- O job foi distribuído entre os três DataNodes, com cada nó processando blocos armazenados localmente.
+- Razões para carga desigual:
+    Dados locais: O Hadoop tenta processar blocos no mesmo nó onde estão armazenados.
+    Número de blocos: Se o arquivo possui poucos blocos, nem todos os nós serão usados igualmente.
+    Configuração do cluster: Parâmetros como número de Map/Reduce Tasks podem limitar a paralelização.
