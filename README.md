@@ -4,7 +4,7 @@ Cluster Hadoop utilizando VMs Ubuntu Server no Proxmox.
 
 🖥️Configuração do Cluster
 
-Foi utilizado o HyperVisor Proxmox rodando em um servidor remoto para provisionar maquinas virtuais (VMs), instalado o Ubuntu Server na sua versão 20.04 (afim de economizar recursos, não foi usada a ultima versão do Ubuntu), o Java JDK 8 e o Hadoop 3.3.6. 
+Foi utilizado o HyperVisor Proxmox rodando em um servidor para provisionar maquinas virtuais (VMs), instalado o Ubuntu Server na sua versão 20.04 (afim de economizar recursos, não foi usada a ultima versão do Ubuntu), o Java JDK 8 e o Hadoop 3.3.6. 
 Configuração da maquina Host:
  - Processador FX8300 8 Cores 3.3 GHz base core.
  - Memória RAM 3.6 GBs DDR3.
